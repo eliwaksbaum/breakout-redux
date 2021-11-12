@@ -38,6 +38,7 @@ position = Vector2( 0.561866, 1.12372 )
 scale = Vector2( 1.88026, 1.82406 )
 
 [node name="Aim" type="Sprite" parent="."]
+visible = false
 scale = Vector2( 0.5, 0.4 )
 texture = ExtResource( 3 )
 centered = false
