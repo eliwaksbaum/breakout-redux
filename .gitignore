@@ -1,0 +1,8 @@
+Build/
+.mono/
+.import/
+Breakout.csproj
+Breakout.sln
+project.godot
+default_env.tres
+export_presets.cfg

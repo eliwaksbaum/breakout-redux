@@ -1,0 +1,43 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Sprites/bricks.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Nodes/Brick.cs" type="Script" id=2]
+[ext_resource path="res://Resources/Score.tres" type="Resource" id=3]
+[ext_resource path="res://Sounds/brick_hit2.mp3" type="AudioStream" id=4]
+[ext_resource path="res://Sounds/brick_hit1.mp3" type="AudioStream" id=5]
+[ext_resource path="res://Sounds/laser_hit.mp3" type="AudioStream" id=6]
+[ext_resource path="res://Sounds/brick_dead.mp3" type="AudioStream" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 70.2375, 21.1848 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 75.7793, 26.1063 )
+
+[node name="Brick" type="StaticBody2D" groups=[
+"Bricks",
+]]
+scale = Vector2( 0.8, 0.8 )
+script = ExtResource( 2 )
+score = ExtResource( 3 )
+hit1 = ExtResource( 5 )
+hit2 = ExtResource( 4 )
+laserhit = ExtResource( 6 )
+die = ExtResource( 7 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 1 )
+vframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 2 )
+
+[connection signal="area_entered" from="Area2D" to="." method="OnAreaEntered"]
+[connection signal="body_exited" from="Area2D" to="." method="OnBodyExited"]

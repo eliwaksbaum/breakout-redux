@@ -1,0 +1,232 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://font.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Prefabs/TextButton.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/Nodes/HSBackButton.cs" type="Script" id=3]
+[ext_resource path="res://Scripts/Nodes/HighScoreList.cs" type="Script" id=4]
+[ext_resource path="res://Sounds/select.mp3" type="AudioStream" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 120
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 70
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 70
+font_data = ExtResource( 1 )
+
+[sub_resource type="InputEventAction" id=4]
+action = "ui_accept"
+
+[sub_resource type="ShortCut" id=5]
+shortcut = SubResource( 4 )
+
+[node name="HighScores" type="VBoxContainer"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -580.0
+margin_top = 20.0
+margin_right = 580.0
+margin_bottom = 220.0
+custom_constants/separation = 28
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="High Scores" type="Label" parent="."]
+margin_left = 212.0
+margin_right = 947.0
+margin_bottom = 120.0
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 1 )
+text = "High Scores"
+
+[node name="ScoreList" type="VBoxContainer" parent="."]
+margin_top = 148.0
+margin_right = 1160.0
+margin_bottom = 543.0
+size_flags_horizontal = 3
+custom_constants/separation = 10
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Record" type="HBoxContainer" parent="ScoreList"]
+margin_right = 1160.0
+margin_bottom = 71.0
+size_flags_horizontal = 3
+custom_constants/separation = 25
+
+[node name="Number" type="Label" parent="ScoreList/Record"]
+margin_right = 44.0
+margin_bottom = 71.0
+custom_fonts/font = SubResource( 2 )
+text = "1."
+
+[node name="Name" type="Label" parent="ScoreList/Record"]
+margin_left = 69.0
+margin_right = 201.0
+margin_bottom = 71.0
+custom_fonts/font = SubResource( 2 )
+text = "AAA"
+
+[node name="Control" type="Control" parent="ScoreList/Record"]
+margin_left = 226.0
+margin_right = 977.0
+margin_bottom = 71.0
+size_flags_horizontal = 3
+
+[node name="Score" type="Label" parent="ScoreList/Record"]
+margin_left = 1002.0
+margin_right = 1160.0
+margin_bottom = 71.0
+custom_fonts/font = SubResource( 2 )
+text = "1000"
+
+[node name="Record2" type="HBoxContainer" parent="ScoreList"]
+margin_top = 81.0
+margin_right = 1160.0
+margin_bottom = 152.0
+size_flags_horizontal = 3
+custom_constants/separation = 7
+
+[node name="Number" type="Label" parent="ScoreList/Record2"]
+margin_right = 62.0
+margin_bottom = 71.0
+custom_fonts/font = SubResource( 2 )
+text = "2."
+
+[node name="Name" type="Label" parent="ScoreList/Record2"]
+margin_left = 69.0
+margin_right = 201.0
+margin_bottom = 71.0
+custom_fonts/font = SubResource( 2 )
+text = "AAA"
+
+[node name="Control" type="Control" parent="ScoreList/Record2"]
+margin_left = 208.0
+margin_right = 995.0
+margin_bottom = 71.0
+size_flags_horizontal = 3
+
+[node name="Score" type="Label" parent="ScoreList/Record2"]
+margin_left = 1002.0
+margin_right = 1160.0
+margin_bottom = 71.0
+custom_fonts/font = SubResource( 2 )
+text = "1000"
+
+[node name="Record3" type="HBoxContainer" parent="ScoreList"]
+margin_top = 162.0
+margin_right = 1160.0
+margin_bottom = 233.0
+size_flags_horizontal = 3
+custom_constants/separation = 7
+
+[node name="Number" type="Label" parent="ScoreList/Record3"]
+margin_right = 62.0
+margin_bottom = 71.0
+custom_fonts/font = SubResource( 2 )
+text = "3."
+
+[node name="Name" type="Label" parent="ScoreList/Record3"]
+margin_left = 69.0
+margin_right = 201.0
+margin_bottom = 71.0
+custom_fonts/font = SubResource( 2 )
+text = "AAA"
+
+[node name="Control" type="Control" parent="ScoreList/Record3"]
+margin_left = 208.0
+margin_right = 995.0
+margin_bottom = 71.0
+size_flags_horizontal = 3
+
+[node name="Score" type="Label" parent="ScoreList/Record3"]
+margin_left = 1002.0
+margin_right = 1160.0
+margin_bottom = 71.0
+custom_fonts/font = SubResource( 2 )
+text = "1000"
+
+[node name="Record4" type="HBoxContainer" parent="ScoreList"]
+margin_top = 243.0
+margin_right = 1160.0
+margin_bottom = 314.0
+size_flags_horizontal = 3
+custom_constants/separation = 7
+
+[node name="Number" type="Label" parent="ScoreList/Record4"]
+margin_right = 62.0
+margin_bottom = 71.0
+custom_fonts/font = SubResource( 2 )
+text = "4."
+
+[node name="Name" type="Label" parent="ScoreList/Record4"]
+margin_left = 69.0
+margin_right = 201.0
+margin_bottom = 71.0
+custom_fonts/font = SubResource( 2 )
+text = "AAA"
+
+[node name="Control" type="Control" parent="ScoreList/Record4"]
+margin_left = 208.0
+margin_right = 995.0
+margin_bottom = 71.0
+size_flags_horizontal = 3
+
+[node name="Score" type="Label" parent="ScoreList/Record4"]
+margin_left = 1002.0
+margin_right = 1160.0
+margin_bottom = 71.0
+custom_fonts/font = SubResource( 2 )
+text = "1000"
+
+[node name="Record5" type="HBoxContainer" parent="ScoreList"]
+margin_top = 324.0
+margin_right = 1160.0
+margin_bottom = 395.0
+size_flags_horizontal = 3
+custom_constants/separation = 7
+
+[node name="Number" type="Label" parent="ScoreList/Record5"]
+margin_right = 62.0
+margin_bottom = 71.0
+custom_fonts/font = SubResource( 2 )
+text = "5."
+
+[node name="Name" type="Label" parent="ScoreList/Record5"]
+margin_left = 69.0
+margin_right = 201.0
+margin_bottom = 71.0
+custom_fonts/font = SubResource( 2 )
+text = "AAA"
+
+[node name="Control" type="Control" parent="ScoreList/Record5"]
+margin_left = 208.0
+margin_right = 995.0
+margin_bottom = 71.0
+size_flags_horizontal = 3
+
+[node name="Score" type="Label" parent="ScoreList/Record5"]
+margin_left = 1002.0
+margin_right = 1160.0
+margin_bottom = 71.0
+custom_fonts/font = SubResource( 2 )
+text = "1000"
+
+[node name="Button" parent="." instance=ExtResource( 2 )]
+margin_left = 490.0
+margin_top = 571.0
+margin_right = 669.0
+margin_bottom = 648.0
+custom_fonts/font = SubResource( 3 )
+shortcut = SubResource( 5 )
+script = ExtResource( 3 )
+buttonClip = ExtResource( 5 )
+
+[connection signal="button_up" from="Button" to="Button" method="OnButtonUp"]

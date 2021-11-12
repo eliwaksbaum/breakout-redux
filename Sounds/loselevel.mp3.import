@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/loselevel.mp3-757fd04fe858b44b58b6ce4506e7b8ea.mp3str"
+
+[deps]
+
+source_file="res://Sounds/loselevel.mp3"
+dest_files=[ "res://.import/loselevel.mp3-757fd04fe858b44b58b6ce4506e7b8ea.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

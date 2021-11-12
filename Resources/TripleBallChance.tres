@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://Prefabs/Powers/TripleBall.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/Resources/PowerChance.cs" type="Script" id=2]
+
+[resource]
+script = ExtResource( 2 )
+power = ExtResource( 1 )
+relativeChance = 0.23

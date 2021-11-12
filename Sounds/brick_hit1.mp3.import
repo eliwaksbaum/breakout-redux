@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/brick_hit1.mp3-02ad97463dca72cf7604b4b03eb4c828.mp3str"
+
+[deps]
+
+source_file="res://Sounds/brick_hit1.mp3"
+dest_files=[ "res://.import/brick_hit1.mp3-02ad97463dca72cf7604b4b03eb4c828.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

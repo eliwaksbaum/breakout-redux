@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Sprites/powers.png" type="Texture" id=1]
+[ext_resource path="res://Resources/PowerSpeed.tres" type="Resource" id=2]
+[ext_resource path="res://Scripts/Nodes/SizeDown.cs" type="Script" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 42.2309
+
+[node name="Power" type="Area2D" groups=[
+"Clear",
+"IStoppables",
+"Powers",
+]]
+script = ExtResource( 3 )
+speed = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 1 )
+hframes = 2
+vframes = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( -0.235966, -0.235964 )
+scale = Vector2( 4.42154, 4.46873 )

@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Prefabs/Bricks/2Brick.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Prefabs/Bricks/1Brick.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Prefabs/Bricks/0Brick.tscn" type="PackedScene" id=3]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Brick" parent="." instance=ExtResource( 3 )]
+position = Vector2( 600, 475 )
+
+[node name="Brick2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 100, 275 )
+
+[node name="Brick4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1100, 275 )
+
+[node name="Brick3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 600, 75 )
+
+[node name="Brick5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 725, 125 )
+
+[node name="Brick6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 725, 425 )
+
+[node name="Brick7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 475, 125 )
+
+[node name="Brick8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 475, 425 )
+
+[node name="Brick9" parent="." instance=ExtResource( 3 )]
+position = Vector2( 850, 175 )
+
+[node name="Brick10" parent="." instance=ExtResource( 3 )]
+position = Vector2( 350, 175 )
+
+[node name="Brick11" parent="." instance=ExtResource( 3 )]
+position = Vector2( 975, 325 )
+
+[node name="Brick12" parent="." instance=ExtResource( 3 )]
+position = Vector2( 225, 325 )
+
+[node name="Brick13" parent="." instance=ExtResource( 1 )]
+position = Vector2( 225, 225 )
+
+[node name="Brick14" parent="." instance=ExtResource( 1 )]
+position = Vector2( 975, 225 )
+
+[node name="Brick15" parent="." instance=ExtResource( 1 )]
+position = Vector2( 350, 375 )
+
+[node name="Brick16" parent="." instance=ExtResource( 1 )]
+position = Vector2( 850, 375 )

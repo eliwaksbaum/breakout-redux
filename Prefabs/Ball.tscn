@@ -1,0 +1,53 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Sprites/ball.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Nodes/Ball.cs" type="Script" id=2]
+[ext_resource path="res://Sprites/aim.png" type="Texture" id=3]
+[ext_resource path="res://Resources/BallData.tres" type="Resource" id=4]
+[ext_resource path="res://Sounds/paddlewall_hit.mp3" type="AudioStream" id=5]
+[ext_resource path="res://Sounds/loselife.mp3" type="AudioStream" id=7]
+
+[sub_resource type="PhysicsMaterial" id=1]
+friction = 0.0
+bounce = 1.0
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 13.7158
+
+[node name="Ball" type="RigidBody2D" groups=["Balls", "IStoppables"]]
+collision_mask = 0
+mode = 2
+physics_material_override = SubResource( 1 )
+gravity_scale = 0.0
+script = ExtResource( 2 )
+data = ExtResource( 4 )
+servePosition = Vector2( 600, 610 )
+loselife = ExtResource( 7 )
+hit = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+position = Vector2( 0.561866, 1.12372 )
+scale = Vector2( 1.88026, 1.82406 )
+
+[node name="Aim" type="Sprite" parent="."]
+scale = Vector2( 0.5, 0.4 )
+texture = ExtResource( 3 )
+centered = false
+offset = Vector2( -3, -115 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 2 )
+
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="OnFallThrough"]
+[connection signal="area_entered" from="Area2D" to="." method="OnAreaEntered"]
+[connection signal="body_entered" from="Area2D" to="." method="OnBodyEntered"]

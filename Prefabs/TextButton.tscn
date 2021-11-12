@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://font.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/Nodes/TextButton.cs" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[node name="Button" type="Button"]
+margin_left = 105.0
+margin_top = 156.0
+margin_right = 235.0
+margin_bottom = 213.0
+size_flags_horizontal = 4
+custom_colors/font_color_focus = Color( 1, 0.992157, 0.521569, 1 )
+custom_colors/font_color_hover = Color( 1, 0.992157, 0.521569, 1 )
+custom_colors/font_color_pressed = Color( 1, 0.992157, 0.521569, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/focus = SubResource( 1 )
+shortcut_in_tooltip = false
+text = "Back"
+flat = true
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
